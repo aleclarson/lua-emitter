@@ -7,7 +7,7 @@ do
       if listeners == nil then
         local listener = fallbacks[name]
         if listener then
-          listener(name, ...)
+          listener(...)
         end
         return self
       end
@@ -144,7 +144,7 @@ once_mt = {
 no_warnings = os.getenv('NO_WARNINGS')
 trace_warnings = os.getenv('TRACE_WARNINGS')
 fallbacks = {
-  error = function(self, ...)
+  error = function(...)
     print(table.concat({
       'error:',
       ...
@@ -153,7 +153,7 @@ fallbacks = {
   end,
   warn = (function()
     if not no_warnings then
-      return function(self, ...)
+      return function(...)
         print(table.concat({
           'warn:',
           ...

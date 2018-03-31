@@ -11,7 +11,7 @@ class Emitter
     listeners = @events[name]
     if listeners == nil
       listener = fallbacks[name]
-      listener name, ... if listener
+      listener ... if listener
       return self
 
     current = listeners
@@ -90,10 +90,10 @@ once_mt =
 no_warnings = os.getenv('NO_WARNINGS')
 trace_warnings = os.getenv('TRACE_WARNINGS')
 fallbacks =
-  error: (...) =>
+  error: (...) ->
     print table.concat {'error:', ...}, ' '
     print debug.traceback()
-  warn: if not no_warnings then (...) =>
+  warn: if not no_warnings then (...) ->
     print table.concat {'warn:', ...}, ' '
     print debug.traceback() if trace_warnings
 
