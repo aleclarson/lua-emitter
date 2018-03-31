@@ -37,6 +37,18 @@ emitter:off('foo')
 
 -- The event->listeners table
 emitter.events
+
+-- Set an event fallback for all emitters.
+Emitter.setFallback('error', function(err, errno)
+  print('unhandled error:', err, errno)
+end)
+
+-- Set an event fallback for one emitter.
+emitter:on('error', function(err, errno)
+  if emitter:len('error') == 1 then
+    print('unhandled error:', err, errno)
+  end
+end)
 ```
 
 Listeners are called in order of `on/once` calls.
