@@ -85,7 +85,7 @@ class Emitter
 off = {}
 once_mt =
   __call: (...) =>
-    @listener ...
+    self.listener ...
     return off
 
 no_warnings = os.getenv('NO_WARNINGS')
