@@ -67,6 +67,7 @@ class Emitter
           continue
 
         if len > 1
+          listeners.len = len - 1
           listeners[i] = false
           break
 
