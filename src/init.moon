@@ -16,7 +16,8 @@ class Emitter
 
     current = listeners
     listeners, len = {}, 0
-    for i, listener in ipairs current
+    for i = 1, current.len
+      listener = current[i]
       continue if listener == false
       if off ~= listener ...
         listener = current[i]
