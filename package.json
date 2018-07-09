@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "files": [
     "emitter",
-    "rockspec"
+    "*.rockspec"
   ],
   "devDependencies": {
     "wch-moon": "*"

@@ -1,5 +1,5 @@
 package = "emitter"
-version = "0.0.2"
+version = "0.0.3-1"
 
 description = {
 	summary = "Event emitters for Lua";
@@ -8,7 +8,8 @@ description = {
 }
 
 source = {
-	url = "git+https://github.com/aleclarson/lua-emitter.git";
+	url = "git://github.com/aleclarson/lua-emitter.git";
+	tag = "0.0.3";
 }
 
 build = {
