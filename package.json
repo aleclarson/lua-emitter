@@ -1,0 +1,11 @@
+{
+  "main": "emitter/init.lua",
+  "version": "0.0.3",
+  "files": [
+    "emitter",
+    "rockspec"
+  ],
+  "devDependencies": {
+    "wch-moon": "*"
+  }
+}
