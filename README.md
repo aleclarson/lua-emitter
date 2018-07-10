@@ -1,4 +1,4 @@
-# lua-emitter v0.0.2
+# lua-emitter v0.0.3
 
 Event emitters for Lua.
 
